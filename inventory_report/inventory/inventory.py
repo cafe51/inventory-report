@@ -33,4 +33,4 @@ class Inventory:
                 return Inventory.generate(list_of_dicts, type)
 
         else:
-            raise ValueError("CAMINHO ERRADO OU FORMATO DESCONHECIDO")
+            raise ValueError("Arquivo inválido")
