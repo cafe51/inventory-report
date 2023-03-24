@@ -34,3 +34,4 @@ class Inventory:
 
         else:
             raise ValueError("CAMINHO ERRADO OU FORMATO DESCONHECIDO")
+ 
