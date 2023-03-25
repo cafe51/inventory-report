@@ -2,16 +2,14 @@ from collections.abc import Iterator
 
 
 class InventoryIterator(Iterator):
-    def __init__(self, list_of_dicts):
-        self.list_of_dicts = list_of_dicts
+    def __init__(self, products):
+        self.products = products
         self.counter = 0
 
     def __next__(self):
-
-        data = self.list_of_dicts[self.counter]
-
-        if not data:
+        if self.counter >= len(self.products):
             raise StopIteration()
 
+        data = self.products[self.counter]
         self.counter += 1
         return data
