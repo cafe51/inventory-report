@@ -34,12 +34,7 @@ class SimpleReport:
         companies = Counter(
             [dict["nome_da_empresa"] for dict in list_of_dicts]
         )
-        max_total_product = max(companies.values())
-        company_with_max_quantity_of_products = ""
-
-        for company in companies:
-            if companies[company] == max_total_product:
-                company_with_max_quantity_of_products = company
+        company_with_max_quantity_of_products = companies.most_common()[0][0]
 
         return company_with_max_quantity_of_products
 
